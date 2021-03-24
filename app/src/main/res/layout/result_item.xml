@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rel_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txt_coupon_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coupon code"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_rbn_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingLeft="16dp"
+                    android:textStyle="bold"
+                    android:text="ribbon message" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewone"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rel_coupon"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewone"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txt_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/txt_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_discount"
+                    android:paddingLeft="16dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/txt_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewtwo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rel_discount"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/lnr_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewtwo"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:textStyle="bold"
+                    android:text="Purchase Amount" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+
+                    android:text=">1500" />
+
+                <TextView
+                    android:id="@+id/txt_slab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text=">1500" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+
+                    android:text=">=5000" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/viewthree"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lnr_purchase"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:id="@+id/lnr_bonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewthree"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:textStyle="bold"
+                    android:text="Bonus Amount" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text="30 % (Max Rs.360)" />
+
+                <TextView
+                    android:id="@+id/txt_bonus_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text=">1500" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text="85%(Max 17000)" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewfour"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lnr_bonus"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp" />
+            <LinearLayout
+                android:id="@+id/lnr_instant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewfour"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:textStyle="bold"
+                    android:text="Instant Cash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text="30 % (Max Rs.360)" />
+
+                <TextView
+                    android:id="@+id/txt_instant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text=">1500" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:paddingLeft="16dp"
+                    android:text="85%(Max 17000)" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewfive"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lnr_instant"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewfive"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_bonus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/txt_expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:text="" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>
