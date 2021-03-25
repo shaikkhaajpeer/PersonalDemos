@@ -59,7 +59,7 @@ class MovieViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
 
         mCouponDiscount?.text="Get "+totalValue.toString()+" % "+" upto $ "+totalAmount
         mValidTill?.text="Valid Till"+movie.valid_until
-        mDeposit?.text ="Min Deposit" + movie.slabs[0].min.toString() +"Applied"
+        mDeposit?.text ="Min Deposit" + movie.slabs[0].min.toString()
         mBonus?.text ="For Every" + movie.wager_to_release_ratio_numerator.toString() +" bet "+movie.wager_to_release_ratio_denominator +" will be released from the bonus amount"
 
         mBonusExpiry?.text ="Bonus expiry "+ movie.wager_bonus_expiry.toString()+" days from the issue "

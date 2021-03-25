@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    >
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:background="@color/color_background"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/colorAccent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,6 +30,10 @@
                     android:id="@+id/txt_coupon_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dotted_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
                     android:text="Coupon code"
                     android:textStyle="bold" />
 
@@ -33,9 +42,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    android:background="@drawable/dotted_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
                     android:paddingLeft="16dp"
-                    android:textStyle="bold"
-                    android:text="ribbon message" />
+                    android:text="ribbon message"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <View
@@ -44,45 +56,74 @@
                 android:layout_height="1dp"
                 android:layout_below="@+id/rel_coupon"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
+                android:background="@color/color_secondary"
                 android:padding="10dp" />
 
-            <RelativeLayout
+            <LinearLayout
                 android:id="@+id/rel_discount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/viewone"
                 android:layout_marginTop="10dp"
-                android:padding="10dp">
-
-                <TextView
-                    android:id="@+id/txt_discount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="16dp"
-                    android:text="" />
-
-                <TextView
-                    android:id="@+id/txt_valid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_discount"
-                    android:paddingLeft="16dp"
-                    android:text="" />
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="10">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true">
+                    android:orientation="vertical"
+                    android:layout_weight="6">
+
+                    <TextView
+                        android:id="@+id/txt_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_valid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    android:layout_weight="4">
 
                     <TextView
                         android:id="@+id/txt_deposit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="" />
-                </LinearLayout>
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Applied"
+                        android:textSize="16sp"
+                        android:textColor="@color/teal_200"
+                        android:textStyle="bold" />
 
-            </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
 
             <View
                 android:id="@+id/viewtwo"
@@ -90,162 +131,31 @@
                 android:layout_height="1dp"
                 android:layout_below="@+id/rel_discount"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
+                android:background="@color/color_secondary"
                 android:padding="10dp" />
 
             <LinearLayout
-                android:id="@+id/lnr_purchase"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/lnr_purchase"
                 android:layout_below="@+id/viewtwo"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:textStyle="bold"
-                    android:text="Purchase Amount" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-
-                    android:text=">1500" />
-
-                <TextView
-                    android:id="@+id/txt_slab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text=">1500" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-
-                    android:text=">=5000" />
+                >
+                <include layout="@layout/row_item"/>
 
             </LinearLayout>
-
-
             <View
                 android:id="@+id/viewthree"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@+id/lnr_purchase"
                 android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
+                android:background="@color/color_secondary"
                 android:padding="10dp" />
-
-            <LinearLayout
-                android:id="@+id/lnr_bonus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/viewthree"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:textStyle="bold"
-                    android:text="Bonus Amount" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text="30 % (Max Rs.360)" />
-
-                <TextView
-                    android:id="@+id/txt_bonus_amt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text=">1500" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text="85%(Max 17000)" />
-
-            </LinearLayout>
-
-            <View
-                android:id="@+id/viewfour"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/lnr_bonus"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
-                android:padding="10dp" />
-            <LinearLayout
-                android:id="@+id/lnr_instant"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/viewfour"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:textStyle="bold"
-                    android:text="Instant Cash" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text="30 % (Max Rs.360)" />
-
-                <TextView
-                    android:id="@+id/txt_instant"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text=">1500" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:paddingLeft="16dp"
-                    android:text="85%(Max 17000)" />
-
-            </LinearLayout>
-
-            <View
-                android:id="@+id/viewfive"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/lnr_instant"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
-                android:padding="10dp" />
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/viewfive"
+                android:layout_below="@+id/viewthree"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -253,6 +163,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     android:text="" />
 
                 <TextView
@@ -260,6 +172,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     android:text="" />
 
             </LinearLayout>
